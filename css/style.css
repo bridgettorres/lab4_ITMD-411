@@ -1,0 +1,59 @@
+body {
+    background-image: linear-gradient(#F87441,#FE7779,#694367);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+img {
+    width: 100px;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Today {
+    border-color: #694367;
+    border-style: solid;
+    border-radius: 25px;
+    border-width: 2px;
+}
+
+.Tomorrow {
+    border-color: #694367;
+    border-style: solid;
+    border-radius: 25px;
+    border-width: 2px;
+    
+}
+
+.footer{
+    width: 100%;
+    background-color: rgb(66, 9, 66);
+    color:beige;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer a:visited{
+    color:pink;
+}
