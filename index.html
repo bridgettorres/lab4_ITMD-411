@@ -8,64 +8,68 @@
 </head>
 <body>
   <!--users should be able to use geolocation with a button-->
-  <button type="button">Get my Location</button>
+  <button type="button" id="button">Get my Location</button>
 
   <!-- Add a select list with specific named locations that you want to
   include (at least 5) that the user can choose from-->
-  <ul>
-    <li><a>Michoacán de Ocampo, Mexico</a></li>
-    <li><a>Eure, France</a></li>
-    <li><a>Maranhão, Brazil</a></li>
-    <li><a>Como, Italy</a></li>
-    <li><a>Icheon, South Korea</a></li>
-  </ul>
+  <div>
+    <button id="mexico">Michoacán de Ocampo, Mexico</button>
+    <button id="france">Eure, France</button>
+    <button id="brazil">Maranhão, Brazil</button>
+    <button id="italy">Como, Italy</button>
+    <button id="skorea">Icheon, South Korea</button>
+  </div>
 
+  <h1 id="titlelocation">LOCATION HERE</h1>
    <!--if location is unkown, documentation describes error responses
-  Make sure to show thge user a message with the error if there is a problem-->
+  Make sure to show the user a message with the error if there is a problem-->
 
-    <!--Uppon Successful response
-  Sunrise and Sunset for both Today and Tomorrow
-  
-o Dawn and Dusk for both Today and Tomorrow
-o The day length for both Today and Tomorrow
-o What time is solar noon for both Today and Tomorrow
-o What time zone are the times shown in-->
+  <!--Uppon Successful response Sunrise and Sunset for both Today and Tomorrow, Dawn and Dusk for both Today and Tomorrow,he day length for both Today and Tomorro, What time is solar noon for both Today and Tomorrow,What time zone are the times shown in-->
   <div class="columns">
-
     <div class="Today">
       <h1>Today</h1>
       <h2>Sunrise</h2>
       <img src="images/sunrise.png" alt="sunrise">
+      <input type="text" id="fsunrise" name="fsunrise"> 
       <h2>Sunset</h2>
       <img src="images/sunset.png" alt="sunset">
+      <input type="text" id="fsunset" name="fsunset"> 
       <h2>Dawn</h2>
+      <input type="text" id="fdawn" name="fdawn"> 
       <h2>Dusk</h2>
+      <input type="text" id="fdusk" name="fdusk"> 
       <p>Day length</p>
+      <input type="text" id="flength" name="flength"> 
       <p>What time is solar noon?</p>
-      <p>What time zone arer the times shown in</p>
+      <input type="text" id="fsolar" name="fsolar"> 
+      <p>What time zone are the times shown in</p>
+      <input type="text" id="ftime" name="ftime"> 
     </div>
 
     <div class="Tomorrow">
       <h1>Tomorrow</h1>
       <h2>Sunrise</h2>
       <img src="images/sunrise.png" alt="sunrise">
+      <input type="text" id="tomsunrise" name="tomsunrise"> 
       <h2>Sunset</h2>
       <img src="images/sunset.png" alt="sunset">
+      <input type="text" id="tomsunset" name="tomsunset"> 
       <h2>Dawn</h2>
+      <input type="text" id="tomdawn" name="tomdawn"> 
       <h2>Dusk</h2>
+      <input type="text" id="tomdusk" name="tomdusk"> 
       <p>Day length</p>
+      <input type="text" id="tomlength" name="tomlength"> 
       <p>What time is solar noon?</p>
-      <p>What time zone arer the times shown in</p>
+      <input type="text" id="tomsolar" name="tomsolar"> 
+      <p>What time zone are the times shown in</p>
+      <input type="text" id="tomtime" name="tomtime"> 
     </div>
   </div>
 
   <div class="footer">
     <p>Powered by <a href="https://sunrisesunset.io/">SunriseSunset.io</a></p>
   </div>
-
-<!--Please show placeholder content or empty reserved space before the user submits the
-request.-->
-
 
     <script src="js/scripts.js"></script>
 </body>

@@ -2,25 +2,6 @@ body {
     background-image: linear-gradient(#F87441,#FE7779,#694367);
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-}
-
 img {
     width: 100px;
 }
