@@ -4,6 +4,8 @@ body {
 
 img {
     width: 100px;
+    display: block;
+    margin: auto;
 }
 
 .columns {
@@ -16,6 +18,8 @@ img {
     border-style: solid;
     border-radius: 25px;
     border-width: 2px;
+    width: 400px;
+    text-align: center;
 }
 
 .Tomorrow {
@@ -23,7 +27,8 @@ img {
     border-style: solid;
     border-radius: 25px;
     border-width: 2px;
-    
+    width: 400px;
+    text-align: center;
 }
 
 .footer{

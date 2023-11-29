@@ -1,34 +1,51 @@
-document.getElementById("button").addEventListener("click", currentLocation);
-document.getElementById("mexico").addEventListener("click", currentLocation);
-document.getElementById("france").addEventListener("click", currentLocation);
-document.getElementById("brazil").addEventListener("click", currentLocation);
-document.getElementById("italy").addEventListener("click", currentLocation);
-document.getElementById("skorea").addEventListener("click", currentLocation);
-
-//geolocation 
+document.getElementById("locations").addEventListener("change", currentLocation);
 
 function currentLocation() {
     let latitude, longitude;
-    if (this.id === "mexico") {
+    if (this.value === "mexico") {
         latitude = 19.56652;
         longitude = -101.70683;
         document.getElementById("titlelocation").innerHTML = "Michoacán de Ocampo, Mexico";
-    } else if (this.id === "france"){
+    } else if (this.value === "france"){
         latitude = 49.0754;
         longitude = 0.48937;
         document.getElementById("titlelocation").innerHTML = "Eure, France";
-    } else if (this.id === "brazil"){
+    } else if (this.value === "brazil"){
         latitude = -4.96095;
         longitude = -45.27442;
         document.getElementById("titlelocation").innerHTML = "Maranhão, Brazil";
-    } else if (this.id === "italy"){
+    } else if (this.value === "italy"){
         latitude = 45.80804;
         longitude = 9.08518;
         document.getElementById("titlelocation").innerHTML = "Como, Italy";
-    } else if (this.id === "skorea"){
+    } else if (this.value === "skorea"){
         latitude = 37.45646;
         longitude = 126.70515;
         document.getElementById("titlelocation").innerHTML = "Incheon, South Korea";
+    } else if (this.value === "button"){
+        navigator.geolocation.getCurrentPosition(function(position) {
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
+            document.getElementById("titlelocation").innerHTML = "Current Location";
+            setLocationFunc(latitude, longitude);
+        });
+        return;
+    } else if (this.value === "empty"){
+        document.getElementById("titlelocation").innerHTML = "No Location Selected";
+        document.getElementById('fsunrise').value = "";
+        document.getElementById('fsunset').value = "";
+        document.getElementById('fdawn').value = "";
+        document.getElementById('fdusk').value = "";
+        document.getElementById('flength').value = "";
+        document.getElementById('fsolar').value = "";
+        document.getElementById('ftime').value = "";
+        document.getElementById('tomsunrise').value = "";
+        document.getElementById('tomsunset').value = "";
+        document.getElementById('tomdawn').value = "";
+        document.getElementById('tomdusk').value = "";
+        document.getElementById('tomlength').value = "";
+        document.getElementById('tomsolar').value = "";
+        document.getElementById('tomtime').value = "";
     }
     setLocationFunc(latitude, longitude)
 }

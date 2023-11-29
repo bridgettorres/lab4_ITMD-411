@@ -7,18 +7,18 @@
   <link rel="stylesheet" media="screen" href="css/style.css" />
 </head>
 <body>
-  <!--users should be able to use geolocation with a button-->
-  <button type="button" id="button">Get my Location</button>
-
   <!-- Add a select list with specific named locations that you want to
   include (at least 5) that the user can choose from-->
-  <div>
-    <button id="mexico">Michoacán de Ocampo, Mexico</button>
-    <button id="france">Eure, France</button>
-    <button id="brazil">Maranhão, Brazil</button>
-    <button id="italy">Como, Italy</button>
-    <button id="skorea">Icheon, South Korea</button>
-  </div>
+  <label for="locations">Choose a location:</label>
+  <select name="locations" id="locations">
+    <option value="empty"></option>
+    <option value="button">Get my Location</option>
+    <option value="mexico">Michoacán de Ocampo, Mexico</option>
+    <option value="france">Eure, France</option>
+    <option value="brazil">Maranhão, Brazil</option>
+    <option value="italy">Como, Italy</option>
+    <option value="skorea">Icheon, South Korea</option>
+  </select>
 
   <h1 id="titlelocation">LOCATION HERE</h1>
    <!--if location is unkown, documentation describes error responses
