@@ -2,13 +2,53 @@ body {
     background-image: linear-gradient(#F87441,#FE7779,#694367);
 }
 
+h1{
+    text-align: center;
+    font-size: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.dropdown{
+    text-align: center;
+    font-size: 25px;
+}
+
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+select{
+    background-color: rgb(247, 172, 33);
+    height: 50px;
+    font-size: 25px;
+    border-radius: 20px;
+    border-color: white;
+    text-align: center;
+}
+
 img {
     width: 100px;
     display: block;
     margin: auto;
 }
 
+#err{
+    color: rgb(88, 10, 45);
+    font-size: 40px;
+    text-align: center;
+}
+
 .columns {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+
+.sun {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tsun{
     display: flex;
     justify-content: space-evenly;
 }
@@ -20,6 +60,7 @@ img {
     border-width: 2px;
     width: 400px;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .Tomorrow {
@@ -29,6 +70,13 @@ img {
     border-width: 2px;
     width: 400px;
     text-align: center;
+    padding-bottom: 20px;
+}
+
+input[type="text"] {
+    border-radius: 25px;
+    text-align: center;
+
 }
 
 .footer{

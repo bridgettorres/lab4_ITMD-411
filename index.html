@@ -9,18 +9,21 @@
 <body>
   <!-- Add a select list with specific named locations that you want to
   include (at least 5) that the user can choose from-->
-  <label for="locations">Choose a location:</label>
-  <select name="locations" id="locations">
-    <option value="empty"></option>
-    <option value="button">Get my Location</option>
-    <option value="mexico">Michoacán de Ocampo, Mexico</option>
-    <option value="france">Eure, France</option>
-    <option value="brazil">Maranhão, Brazil</option>
-    <option value="italy">Como, Italy</option>
-    <option value="skorea">Icheon, South Korea</option>
-  </select>
+  <div class="dropdown">
+    <label for="locations">Choose a location:</label>
+    <select name="locations" id="locations">
+      <option value="empty"></option>
+      <option value="button">Get my Location</option>
+      <option value="mexico">Michoacán de Ocampo, Mexico</option>
+      <option value="france">Eure, France</option>
+      <option value="brazil">Maranhão, Brazil</option>
+      <option value="italy">Como, Italy</option>
+      <option value="skorea">Icheon, South Korea</option>
+    </select>
+  </div>
 
-  <h1 id="titlelocation">LOCATION HERE</h1>
+  <h1 id="titlelocation">Sunrise and Sunset Times</h1>
+  <p id = "err"></p>
    <!--if location is unkown, documentation describes error responses
   Make sure to show the user a message with the error if there is a problem-->
 
@@ -28,41 +31,53 @@
   <div class="columns">
     <div class="Today">
       <h1>Today</h1>
-      <h2>Sunrise</h2>
-      <img src="images/sunrise.png" alt="sunrise">
-      <input type="text" id="fsunrise" name="fsunrise"> 
-      <h2>Sunset</h2>
-      <img src="images/sunset.png" alt="sunset">
-      <input type="text" id="fsunset" name="fsunset"> 
+      <div class="sun">
+        <div>
+          <h2>Sunrise</h2>
+          <img src="images/sunrise.png" alt="sunrise">
+          <input type="text" id="fsunrise" name="fsunrise">
+        </div>
+        <div>
+          <h2>Sunset</h2>
+          <img src="images/sunset.png" alt="sunset">
+          <input type="text" id="fsunset" name="fsunset"> 
+        </div>
+      </div>
       <h2>Dawn</h2>
       <input type="text" id="fdawn" name="fdawn"> 
       <h2>Dusk</h2>
-      <input type="text" id="fdusk" name="fdusk"> 
-      <p>Day length</p>
+      <input type="text" id="fdusk" name="fdusk">
+      <h2>Day length</h2>
       <input type="text" id="flength" name="flength"> 
-      <p>What time is solar noon?</p>
+      <h2>What time is solar noon?</h2>
       <input type="text" id="fsolar" name="fsolar"> 
-      <p>What time zone are the times shown in</p>
+      <h2>What time zone are the times shown in?</h2>
       <input type="text" id="ftime" name="ftime"> 
     </div>
 
     <div class="Tomorrow">
       <h1>Tomorrow</h1>
-      <h2>Sunrise</h2>
-      <img src="images/sunrise.png" alt="sunrise">
-      <input type="text" id="tomsunrise" name="tomsunrise"> 
-      <h2>Sunset</h2>
-      <img src="images/sunset.png" alt="sunset">
-      <input type="text" id="tomsunset" name="tomsunset"> 
+      <div class="tsun">
+        <div>
+          <h2>Sunrise</h2>
+          <img src="images/sunrise.png" alt="sunrise">
+          <input type="text" id="tomsunrise" name="tomsunrise">
+        </div>
+        <div>
+          <h2>Sunset</h2>
+          <img src="images/sunset.png" alt="sunset">
+          <input type="text" id="tomsunset" name="tomsunset"> 
+        </div>
+      </div>
       <h2>Dawn</h2>
       <input type="text" id="tomdawn" name="tomdawn"> 
       <h2>Dusk</h2>
       <input type="text" id="tomdusk" name="tomdusk"> 
-      <p>Day length</p>
+      <h2>Day length</h2>
       <input type="text" id="tomlength" name="tomlength"> 
-      <p>What time is solar noon?</p>
+      <h2>What time is solar noon?</h2>
       <input type="text" id="tomsolar" name="tomsolar"> 
-      <p>What time zone are the times shown in</p>
+      <h2>What time zone are the times shown in?</h2>
       <input type="text" id="tomtime" name="tomtime"> 
     </div>
   </div>
