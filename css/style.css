@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(#F87441,#FE7779,#694367);
+    background-image: linear-gradient(#F87441,#FE7779,#91438d);
 }
 
 h1{
@@ -32,6 +32,8 @@ img {
     width: 100px;
     display: block;
     margin: auto;
+    border-radius: 50px;
+    padding-bottom: 20px;
 }
 
 #err{
