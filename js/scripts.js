@@ -1,5 +1,6 @@
 document.getElementById("locations").addEventListener("change", currentLocation);
 
+//getting the latitute and longitude of the 5 locations, also changing the title with the locations name
 function currentLocation() {
     let latitude, longitude;
     if (this.value === "mexico") {
@@ -28,21 +29,38 @@ function currentLocation() {
         document.getElementById("titlelocation").innerHTML = "Incheon, South Korea";
         document.getElementById('err').innerHTML = "";
     } else if (this.value === "button"){
+        //geolocation, accessing the users current position, and obtaining the latitude and longitude
         navigator.geolocation.getCurrentPosition(function(position) {
             latitude = position.coords.latitude;
             longitude = position.coords.longitude;
             document.getElementById("titlelocation").innerHTML = "Current Location";
+            //if successfull error msg should not be displayed
             document.getElementById('err').innerHTML = "";
             setLocationFunc(latitude, longitude);
         },
-        function(err){
+        function(err){ //handling error if permission is denied by user
             if(err.code === err.PERMISSION_DENIED) {
                 document.getElementById('err').innerHTML = "Error:" + err.message;
+                document.getElementById('fsunrise').value = "";
+                document.getElementById('fsunset').value = "";
+                document.getElementById('fdawn').value = "";
+                document.getElementById('fdusk').value = "";
+                document.getElementById('flength').value = "";
+                document.getElementById('fsolar').value = "";
+                document.getElementById('ftime').value = "";
+                document.getElementById('tomsunrise').value = "";
+                document.getElementById('tomsunset').value = "";
+                document.getElementById('tomdawn').value = "";
+                document.getElementById('tomdusk').value = "";
+                document.getElementById('tomlength').value = "";
+                document.getElementById('tomsolar').value = "";
+                document.getElementById('tomtime').value = "";
             }
         }
         );
         return;
     } else if (this.value === "empty"){
+        //added an empty selection which should clear everything from the text fields
         document.getElementById("titlelocation").innerHTML = "No Location Selected";
         document.getElementById('fsunrise').value = "";
         document.getElementById('fsunset').value = "";
@@ -64,8 +82,10 @@ function currentLocation() {
 }
 
 function setLocationFunc(lat,long){
+    //retrieving sunrise and sunset times for a specific location
     const todayurl = `https://api.sunrisesunset.io/json?lat=${lat}&lng=${long}&date=today`
     const tomorrowurl = `https://api.sunrisesunset.io/json?lat=${lat}&lng=${long}&date=tomorrow`
+    //fetching for today
     fetch(todayurl)
     .then(response => response.json())
     .then(data => {
@@ -79,6 +99,7 @@ function setLocationFunc(lat,long){
 
         return fetch(tomorrowurl)
     })
+    //fetching for tomorrow
     .then(response => response.json())
     .then(data => {
         document.getElementById('tomsunrise').value = data.results.sunrise;
@@ -89,6 +110,7 @@ function setLocationFunc(lat,long){
         document.getElementById('tomsolar').value = data.results.solar_noon;
         document.getElementById('tomtime').value = data.results.timezone;
     })
-    .catch(error => document.getElementById('err').innerHTML = "Error" + error.message)
+    //errors if unable to obtain anything from api
+    .catch(error => document.getElementById('err').innerHTML = "Error: " + error.message)
     
 }

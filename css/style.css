@@ -6,6 +6,8 @@ h1{
     text-align: center;
     font-size: 60px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(66, 9, 66);
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
 }
 .dropdown{
     text-align: center;
@@ -14,10 +16,11 @@ h1{
 
 h2{
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color:#521e14
 }
 
 select{
-    background-color: rgb(247, 172, 33);
+    background-color:#FAB919;
     height: 50px;
     font-size: 25px;
     border-radius: 20px;
@@ -76,6 +79,11 @@ img {
 input[type="text"] {
     border-radius: 25px;
     text-align: center;
+    background-color: white;
+    border-color: #722111;
+    font-size: 13px;
+    color: #722111;
+    font-weight: bold;
 
 }
 
@@ -90,4 +98,8 @@ input[type="text"] {
 
 .footer a:visited{
     color:pink;
+}
+
+.footer a{
+    color:yellow;
 }
